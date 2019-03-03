@@ -16,9 +16,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.searchGamesButton) Button mSearchGamesButton;
+    @BindView(R.id.searchGamesButton) Button mFindRestaurantsButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +25,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mSearchGamesButton.setOnClickListener(this);
+        mFindRestaurantsButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v == mSearchGamesButton) {
+        if(v == mFindRestaurantsButton) {
             String location = mLocationEditText.getText().toString();
             Intent intent = new Intent(MainActivity.this, GamesActivity.class);
             intent.putExtra("location", location);

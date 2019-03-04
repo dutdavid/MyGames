@@ -34,7 +34,7 @@ The app does the following
 - searches games genres
 - displays the games in that genre
 
-#Copyright and license information
+# Copyright and license information
 MIT License
 
 Copyright (c) [2019] [David Dut]
